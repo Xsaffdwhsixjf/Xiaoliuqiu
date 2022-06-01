@@ -20,6 +20,7 @@ a {
 }
 
 nav {
+    height: 128px;
 
     .container {
         display: flex;
@@ -36,7 +37,6 @@ nav {
             width: 105px;
             opacity: 0.7;
             margin: 0 30px;
-            z-index: 4;
 
         }
 
@@ -49,7 +49,7 @@ nav {
                 .toggler {
                     position: fixed;
                     top: 20px;
-                    right: 9%;
+                    right: 4%;
                     z-index: 2;
                     cursor: pointer;
                     width: 50px;
@@ -93,7 +93,7 @@ nav {
                 .hamburger {
                     position: fixed;
                     top: 30px;
-                    left: 81%;
+                    left: 85%;
                     z-index: 1;
                     width: 60px;
                     height: 60px;
@@ -104,13 +104,28 @@ nav {
                     align-items: center;
                     justify-content: center;
 
+                    @media (max-width: 1180px) {
+                        left: 90%;
+                    }
+
+                    @media (max-width: 650px) {
+                        left: 88%;
+                    }
+
+                    @media (max-width: 550px) {
+                        left: 86%;
+                    }
+                    @media (max-width: 450px) {
+                        left: 85%;
+                    }
+
                     .hambar {
                         /* Hamburger Line */
                         position: relative;
                         flex: none;
                         width: 100%;
                         height: 2px;
-                        background-color: black;
+                        background-color: #183333;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -137,7 +152,6 @@ nav {
                 }
 
                 .menu {
-
                     width: 100vw;
                     height: 100%;
                     visibility: visible;
@@ -158,6 +172,10 @@ nav {
                             opacity: 1;
                             /* 一開始先透明 */
 
+                            a {
+                                color: #183333;
+                            }
+
                         }
                     }
                 }
@@ -176,7 +194,7 @@ nav {
 
                         a {
                             // / 下拉選單字體顏色(清單)
-                            color: grey;
+                            color: #fff;
                             padding: 12px 16px;
                             text-decoration: none;
                             display: block;
@@ -188,6 +206,7 @@ nav {
                         float: left;
                         // overflow: hidden;
                         font-size: 30px;
+                        color: #183333;
 
 
                         .dropbtn {
@@ -197,7 +216,7 @@ nav {
                             border: none;
                             outline: none;
                             // 下拉選單字體顏色(btn)
-                            color: grey;
+                            color: #183333;
                             background-color: transparent;
                             font-family: inherit;
                             margin: 0;
@@ -259,7 +278,6 @@ nav {
 
                 to {
                     -webkit-mask-position: -50%;
-
                 }
             }
         }
@@ -269,7 +287,7 @@ nav {
         .theme {
             font-size: 1rem;
             // navbar字體大小
-            color: grey;
+            color: #183333;
             // navbar字體顏色
             text-align: center;
             opacity: 0.9;
@@ -283,10 +301,14 @@ nav {
 #subject {
     font-size: 28px;
     position: absolute;
-    top: 110px;
+    top: 85px;
     left: 80px;
     letter-spacing: 5px;
-    z-index: 3;
+    z-index: 1;
+
+    @media (max-width: 530px){
+        left: 7%;
+    }
 
     span {
         color: rgb(86, 98, 98);
@@ -356,7 +378,7 @@ nav {
 
 
 // Rwd變版
-@media screen and (max-width: 1074px) {
+@media screen and (max-width: 1180px) {
     nav {
         .container {
             padding: 0;
@@ -365,7 +387,6 @@ nav {
                 top: 40px;
                 left: 5%;
                 width: 100px;
-
             }
 
             .nav {
@@ -427,7 +448,6 @@ nav {
 
                                         .dropdown-content {
                                             // display: none;
-                                            
 
                                             &.list1,
                                             &.list2 {
@@ -437,7 +457,6 @@ nav {
                                                 flex-direction: column;
                                                 align-items: center;
                                                 justify-content: center;
-                                                
 
                                                 a {
                                                     font-size: 14px;
