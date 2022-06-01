@@ -99,7 +99,11 @@ body {
             max-width: 80%;
 
             .titleBox{
-                font-size: 26px;
+
+                width: 400px;
+                font-size: 22px;
+                line-height: 70px;
+                font-weight: 200em;
             }
 
             .midBox {
@@ -107,11 +111,18 @@ body {
             }
         }
 
+        #info{
+
+            font-size: 16px;
+            letter-spacing: 2px;
+        
+
         .oilstop {
             width: 100%;
             padding: 50px;
             border-radius: 50px;
         }
+    }
 
     }
 

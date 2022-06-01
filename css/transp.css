@@ -92,12 +92,19 @@ body {
     max-width: 80%;
   }
   #wholeArticle section .titleBox {
-    font-size: 26px;
+    width: 400px;
+    font-size: 22px;
+    line-height: 70px;
+    font-weight: 200em;
   }
   #wholeArticle section .midBox {
     display: none;
   }
-  #wholeArticle .oilstop {
+  #wholeArticle #info {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+  #wholeArticle #info .oilstop {
     width: 100%;
     padding: 50px;
     border-radius: 50px;

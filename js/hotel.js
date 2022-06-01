@@ -1,7 +1,7 @@
 let screen_width = document.querySelector('html').clientWidth
 let card = document.querySelector('#hotel_info');
 let top_btn =document.querySelector('.top_btn')
-fetch('../js/ball_hotel.json')
+fetch('./js/ball_hotel.json')
     .then(function (response) {
         return response.json();
     })
