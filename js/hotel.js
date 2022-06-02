@@ -12,6 +12,7 @@ fetch('./js/ball_hotel.json')
 console.log(screen_width);
 
 function print(index) {
+    let dataCard = '';
     let N = 149;
     for (let i = 0; i < N; i += 2) {
         let members1 = index.members[i];
@@ -86,51 +87,53 @@ function print(index) {
         </div>
         </td>`
         }
-        card.innerHTML += `<tr>${A1}${A2}</tr>`;
+        dataCard += `<tr>${A1}${A2}</tr>`;
+        card.innerHTML = dataCard;
         // if (i == N - 1 && (N % 2 != 0)) {
         //     card.innerHTML += `<tr>${A1}<td></td></tr>`;
         // } else {
         //     card.innerHTML += `<tr>${A1}${A2}</tr>`;
         // }
     };
-    if(screen_width>1250){
-        
-    $(document).ready(function () {
-        $('#table_id').dataTable({
-            "bPaginate": true,
-            "bLengthChange": false,
-            "bFilter": true,
-            "bInfo": false,
-            "lengthMenu": [3],
-            "bAutoWidth": false,
-            "language": {
-                "emptyTable": "資料載入時，發生了錯誤，試試重新整理",
-                "zeroRecords": "無搜尋結果，試試更換關鍵字",
-                "oPaginate": {
-                    "sNext": '<i class="fa-solid fa-angles-right"></i>',
-                    "sPrevious": '<i class="fa-solid fa-angles-left"></i>'
+    if (screen_width > 1250) {
+
+        $(document).ready(function () {
+            $('#table_id').dataTable({
+                "bPaginate": true,
+                "bLengthChange": false,
+                "bFilter": true,
+                "bInfo": false,
+                "lengthMenu": [3],
+                "bAutoWidth": false,
+                "language": {
+                    "emptyTable": "資料載入時，發生了錯誤，試試重新整理",
+                    "zeroRecords": "無搜尋結果，試試更換關鍵字",
+                    "oPaginate": {
+                        "sNext": '<i class="fa-solid fa-angles-right"></i>',
+                        "sPrevious": '<i class="fa-solid fa-angles-left"></i>'
+                    }
                 }
-            }
+            });
         });
-    });
-}else{
-    top_btn.classList.remove('d-none')
-    $(document).ready(function () {
-        $('#table_id').dataTable({
-            "bPaginate": false,
-            "bLengthChange": false,
-            "bFilter": true,
-            "bInfo": false,
-            "lengthMenu": [3],
-            "bAutoWidth": false,
-            "language": {
-                "emptyTable": "資料載入時，發生了錯誤，試試重新整理",
-                "zeroRecords": "無搜尋結果，試試更換關鍵字",
-                "oPaginate": {
-                    "sNext": '<i class="fa-solid fa-angles-right"></i>',
-                    "sPrevious": '<i class="fa-solid fa-angles-left"></i>'
+    } else {
+        top_btn.classList.remove('d-none')
+        $(document).ready(function () {
+            $('#table_id').dataTable({
+                "bPaginate": false,
+                "bLengthChange": false,
+                "bFilter": true,
+                "bInfo": false,
+                "lengthMenu": [3],
+                "bAutoWidth": false,
+                "language": {
+                    "emptyTable": "資料載入時，發生了錯誤，試試重新整理",
+                    "zeroRecords": "無搜尋結果，試試更換關鍵字",
+                    "oPaginate": {
+                        "sNext": '<i class="fa-solid fa-angles-right"></i>',
+                        "sPrevious": '<i class="fa-solid fa-angles-left"></i>'
+                    }
                 }
-            }
+            });
         });
-    });
-}}
+    }
+}
